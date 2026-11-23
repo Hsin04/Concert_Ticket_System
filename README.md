@@ -15,3 +15,4 @@ Set `window.EVENT_API_BASE_URL` in `config.js` to your API origin. The client su
 This repository does not include a backend, payment processing, shared inventory, or automatic timeout release. The demo confirms bookings immediately in the current browser. A live backend must create atomic seat holds with an expiry and run a server-side expiry worker to return unpaid seats, even after a buyer closes the page. Return remaining quantity and explicit section/row/seat labels in ticket listings so later buyers can see exactly what is still available.
 
 In demo mode, Admin searches local browser bookings and marks the seat pool as unverified. The audit API should return `booking` and `seatReleaseAudit` fields, including audit status (`verified`, `mismatch`, or `pending`), expected and released seat counts, current available count, and verification time. The UI never treats a cancelled status alone as proof that seats were released.
+
